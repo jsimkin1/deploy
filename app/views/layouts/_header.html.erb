@@ -1,26 +1,19 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </a>
-             <a class="brand" href="/">Release Manager App</a>
-
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li>
-                            <%= link_to 'Home',  root_path %>
-                        </li>
-                        <li>    
-                            <%= link_to 'About',  about_path %>
-                        </li>
-                    </ul>
-                    <ul class="nav pull-right">
-                                <li><%= link_to 'Login',  '#' %></li>
-                    </ul>
-                </div>
+            </button>
+            <a class="brand" href="/">Store Manager Portal</a>
+            <div class="nav-collapse collapse">
+                <p class="navbar-text pull-right">Logged in as <a href="#" class="navbar-link">Username</a></p>
+                <ul class="nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
     </div>
 </div>

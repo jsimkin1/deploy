@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Deploy</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
-</head>
-<body>
-<%= render 'layouts/header' %>
-<div class="container">
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-</div>
+	<head>
+	  <title>Deploy</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
-</body>
+        var options = {
+          title: 'My Daily Activities',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+	  <%= csrf_meta_tags %>
+	  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+	</head>
+	<body>
+		<%= render 'layouts/header' %>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">
+		   			<%= render 'layouts/nav' %>
+		   		</div>
+			 	<div class="span10">
+			 		<%= yield %>
+			 		<hr>
+			 		<%= render 'layouts/footer' %>
+			 	</div>	
+			</div>
+		</div>
+	</body>
 </html>

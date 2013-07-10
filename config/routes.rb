@@ -1,6 +1,10 @@
 Deploy::Application.routes.draw do
   get "pages/home"
   get 'about' => 'pages#about'
+  get 'repo' => 'pages#repo'
+  get 'wantlist' => 'pages#wantlist'
+  get 'rental_pricing' => 'pages#rental_pricing'
+  get 'new_used_pricing' => 'pages#new_used_pricing'
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:

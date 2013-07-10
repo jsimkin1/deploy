@@ -2,16 +2,89 @@
 
 @import 'bootstrap-responsive';
 
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
-$btnPrimaryBackground: purple;
+$navbarBackgroundHighlight: black;
+$navbarBackground: black;
 
 @import 'bootstrap';
-body{
+@import 'bootstrap-responsive';
+
+body {
     padding-top: 60px;
 }
 
-@import 'bootstrap-responsive';
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+.well {
+    margin-left: -20px;
+    margin-top: -20px;
+    height: 1000px;
+    padding: 20px 0;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    margin-bottom: 0px;
+}
+
+/*
+
+.navbar .brand{
+	color: white;
+}
+
+.navbar .nav li a{
+	color: white;
+}
+
+.navbar .brand:hover{
+	color: #eee;
+}
+
+.navbar .nav li a:hover{
+	color: #eee;
+}
+
+.span2 {
+	height: 1000px;
+	margin-top: -20px;	
+	background-color: #eee;
+}
+
+.nav li a:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.nav-list {
+	border-right: 1px solid #ddd;
+	height: 100%;
+}
+
+.sidebar-nav-fixed {
+     position:fixed;
+     top:60px;
+     width:21.97%;
+ }
+
+ @media (max-width: 767px) {
+     .sidebar-nav-fixed {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     .sidebar-nav-fixed {
+         position:static;
+        width: auto;
+     }
+ }
+
+ .container-fluid {
+	padding-left: 0px;
+}
 
 .navbar-inner{
     @include box-shadow(none !important);
@@ -24,4 +97,4 @@ body{
     a{
         color: $gray;
     }
-}
+}*/
